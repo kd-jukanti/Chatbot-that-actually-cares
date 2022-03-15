@@ -1,0 +1,29 @@
+dataset:
+  data_dir: /cephyr/users/anjalip/Alvis/project_dml/data
+model:
+  model_loc: /cephyr/NOBACKUP/groups/t4ai_chair/GPT/ #/cephyr/users/anjalip/Alvis/project_dml/models
+  model: gpt2
+  ckpt:
+experiment:
+  dump_path: /cephyr/NOBACKUP/groups/t4ai_chair/GPT/experiments
+  exp_id:
+  wandb_log: False
+  wandb_name: trial_DML
+hyperparameters:
+  lr: 5e-4
+  epochs: 5
+  batch_size: 16
+  max_len: 1024
+  max_diag_hist: 2
+  stopping_criterion_decrease_counts_max: 10
+  max_norm: 1.0
+  gradient_accumulation_steps: 1
+mode:
+  prefix: train
+  seed: 0
+specialTokens:
+  pad_token: <pad>
+  bos_token: <bos>
+  eos_token: <eos>
+  s1_token: <s1>
+  s2_token: <s2>

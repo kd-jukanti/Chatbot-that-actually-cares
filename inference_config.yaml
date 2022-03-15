@@ -1,0 +1,22 @@
+model:
+  model_loc: /cephyr/NOBACKUP/groups/t4ai_chair/GPT/ #/cephyr/users/anjalip/Alvis/project_dml/models
+  model: gpt2 #microsoft/DialoGPT-small
+  ckpt: best_model_train.ckpt
+experiment:
+  dump_path: /cephyr/users/anjalip/Alvis/project_dml/experiments
+  exp_id:
+  wandb_log: False
+hyperparameters:
+  max_len: 1024
+  max_diag_hist: 5
+  top_p: 0.9
+  end: STOP
+mode:
+  prefix: infer
+  seed: 0
+specialTokens:
+  pad_token: <pad>
+  bos_token: <bos>
+  eos_token: <eos>
+  s1_token: <s1>
+  s2_token: <s2>
